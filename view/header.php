@@ -44,7 +44,7 @@
                             Produtos
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="cadastroTenis.php">Cadastrar</a></li>
+                            <li><a class="dropdown-item" href="cadastroBone.php">Cadastrar</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>

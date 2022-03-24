@@ -40,7 +40,7 @@ foreach($dado as $nomebone):
 ?>
     <tr>
       <th scope="row"><?=$nomebone["idbone"];?></th>
-      <td><?=$nomebone["nometenis"]?></td>
+      <td><?=$nomebone["nomebone"]?></td>
       <td><?=$nomebone["valorbone"]?></td>
       <td><?=$nomebone["marcabone"]?></td>
       <td>

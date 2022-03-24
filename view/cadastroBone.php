@@ -7,7 +7,7 @@ include_once("header.php");
 <form class="row g-3" action="../controler/inserirCadastroBone.php" method="Get">
   <div class="col-md-12">
     <label for="inputBone" class="form-label">Nome do Bone</label>
-    <input type="text" name="nomeBone" class="form-control" id="inputBone" placeholder="" required>
+    <input type="text" name="nomebone" class="form-control" id="inputBone" placeholder="" required>
   </div>
 
   <div class="col-md-6">

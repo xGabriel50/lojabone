@@ -10,7 +10,7 @@ include_once("../model/boneModel.php");
     <label class="visually-hidden" for="inlineFormInputGroupUsername">Código do Boné</label>
     <div class="input-group">
       <div class="input-group-text">Código</div>
-      <input type="text" name="nomebone" class="form-control" id="inlineFormInputGroupUsername" placeholder="">
+      <input type="text" name="idbone" class="form-control" id="inlineFormInputGroupUsername" placeholder="">
     </div>
   </div>
   <div class="col-2">
@@ -34,7 +34,7 @@ include_once("../model/boneModel.php");
 $codigobone = isset($_POST["idbone"])? $_POST["idbone"] : ""; 
 if($codigobone){
 $codigobone = visuBoneCodigo($conn, $codigobone);
-
+if($codigobone){
 ?>
     <tr>
       <th scope="row"><?=$codigobone["idbone"];?></th>
@@ -56,6 +56,9 @@ $codigobone = visuBoneCodigo($conn, $codigobone);
 
       </td>
     </tr>
+  <?php
+}
+  ?>
   </tbody>
 </table>
 

@@ -1,8 +1,7 @@
 <?php 
 
 function inserirCadastroBone($conn,$nomebone,$valorbone,$marcabone,$estoquebone){
-    $query = "INSERT INTO `tbbone` (`idbone`, `nomebone`, `valorbone`, `marcabone`, `estoquebone`) 
-    VALUES (NULL,'{$nomebone}', '{$valorbone}', '{$marcabone}', '{$estoquebone}')";
+    $query = "INSERT INTO `tbbone` (`nomebone`, `valorbone`, `marcabone`, `estoquebone`) VALUES ('{$nomebone}', '{$valorbone}', '{$marcabone}', '{$estoquebone}')";
     $dados = mysqli_query($conn, $query);
     return $dados; 
 }
@@ -21,10 +20,12 @@ function visuBoneMarca($conn, $marcabone){
 function visuBoneCodigo($conn, $codigobone){
     $query = "select * from tbbone where idbone = {$codigobone}";
     $resultado = mysqli_query($conn, $query);
+    $resultado = mysqli_fetch_array($resultado);
+   
     return $resultado; 
 }
 function alterarBone($conn,$codigobone,$nomebone,$valorbone,$marcabone,$tamanhobone,$estoquebone){
-    $query = "update tbbone set 
+    $query = "update tbbone set   
     nomebone='{$nomebone}', 
     valorbone='{$valorbone}', 
     marcabone= '{$marcabone}',
@@ -34,7 +35,7 @@ function alterarBone($conn,$codigobone,$nomebone,$valorbone,$marcabone,$tamanhob
     return $resultado;
 }
 function deletarBone($conn,$codigobone){
-    $query = "delete from tbbone where idbone='{$codigobone}'";
+    $query = "delete from tbbone where idbone ='{$codigobone}'";
     $resultado = mysqli_query($conn,$query);
     return $resultado;
 }
